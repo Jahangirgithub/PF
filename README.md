@@ -1,2 +1,2 @@
 # PF-programming-Fundamentals-
-BSCS
+BSCS & BSIT
