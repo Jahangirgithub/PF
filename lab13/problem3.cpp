@@ -14,10 +14,10 @@ int main()
     char cstring[50]{};
     fstream fin;
     fin.open("./Dictionary.txt");
-    if (fin.eof())
-    {
-        cout << "The file is  not openend" << endl;
-    }
+    // if (fin.eof())
+    // {
+    //     cout << "The file is  not openend" << endl;
+    // }
     while (fin >> cstring)
     {
         counter = 0;
