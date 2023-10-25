@@ -1,12 +1,17 @@
 /*
-a)Write a function that accepts an array of integers and a ‘Key’ and returns the index of the first occurrence of the ‘Key’ in the array. If the ‘Key’ is not present in the array, the function returns -1.
+a)Write a function that accepts an array of integers and a ‘Key’ and returns the index of the second last occurrence of the ‘Key’ in the array. If the ‘Key’ is not present or there is no second last occurrence in the array, the function returns -1.
 
-Example 1:
-Array:   2 -2 3 8 5 18 4 9 8 1
+Example 1: 	
+Array:   2 -2 3 8 5 1 8 4 9 8 1
 Key:   	8
-The function returns: 3
-
+The function returns: 6
+  
 Example 2:
+Array:   2 -2 3 8 5 18 4 9 8 1
+Key:   	3
+The function returns:  -1
+
+Example 3:
 Array:   2 -2 3 8 5 18 4 9 8 1
 Key:   	7
 The function returns:  -1
@@ -17,16 +22,18 @@ b)Write a program that declares an array of integer and populates it from the us
 using namespace std;
 int print_index(int *arr, int elements, int keys)
 {
-    int index{-1};
+    int second_index{-1};
+    int first_index{-1};
     for (int idx{}; idx < elements; idx += 1)
     {
         if (keys == arr[idx])
         {
-            index = idx;
-            break;
+            second_index=first_index;
+            first_index=idx;
+    
         }
     }
-    return index;
+    return second_index;
 }
 int main()
 {

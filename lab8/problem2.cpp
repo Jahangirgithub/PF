@@ -1,12 +1,17 @@
 /*
-a)Write a function that accepts an array of integers and a ‘Key’ and returns the index of the first occurrence of the ‘Key’ in the array. If the ‘Key’ is not present in the array, the function returns -1.
+a)Write a function that accepts an array of integers and a ‘Key’ and returns the index of the last occurrence of the ‘Key’ in the array. If the ‘Key’ is not present in the array, the function returns -1.
 
-Example 1:
-Array:   2 -2 3 8 5 18 4 9 8 1
+Example 1: 	
+Array:   2 -2 3 8 5 1 8 4 9 8 1
 Key:   	8
-The function returns: 3
-
+The function returns: 9
+  
 Example 2:
+Array:   2 -2 3 8 5 18 4 9 8 1
+Key:   	3
+The function returns:  2
+
+Example 3:
 Array:   2 -2 3 8 5 18 4 9 8 1
 Key:   	7
 The function returns:  -1
@@ -23,7 +28,7 @@ int print_index(int *arr, int elements, int keys)
         if (keys == arr[idx])
         {
             index = idx;
-            break;
+    
         }
     }
     return index;
@@ -32,7 +37,7 @@ int main()
 {
     int arr[10]{2, 3, 4, 5, 6, 7, 8, 8, 8, 8};
     int key = 8;
-    cout << "The return index is :" << print_index(arr, 10, key);
+    cout << "The return lats index is :" << print_index(arr, 10, key);
 
     return 0;
 }
