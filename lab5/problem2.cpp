@@ -7,3 +7,29 @@
 		Count of Positive Odd numbers:  2
 
 */
+#include <iostream>
+using namespace std;
+int main()
+{
+	int number{}, even_counter{}, odd_counter{};
+	cout << "Enter the positive integers : ";
+	cin >> number;
+	while (number != -90)
+	{
+		if (number > 0)
+		{
+			if (number % 2 == 0)
+			{
+				even_counter += 1;
+			}
+			else
+			{
+				odd_counter += 1;
+			}
+		}
+		cin >> number;
+	}
+	cout << "Count of Positive Even numbers: " << even_counter << endl;
+	cout << "Count of Positive Odd numbers:  " << odd_counter << endl;
+	return 0;
+}
