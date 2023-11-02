@@ -13,3 +13,21 @@ For example, if function parameter contains 9, then the pattern has a height of 
 lines ---line one  has a single asterisk, line 2 has two asterisks and so on.
 
 */
+#include<iostream>
+using namespace std;
+int main()
+{
+
+	int number{};
+	cout<<"Enter the number of stars: ";
+	cin>>number;
+	for(int i{};i<number;i+=1)
+	{
+		for(int j{};j<=i;j+=1)
+		{
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+	return 0;
+}
